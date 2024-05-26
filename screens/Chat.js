@@ -6,6 +6,7 @@ import { onStartRecord, onStopRecord } from '../AudioRecorder.js';
 import 'react-native-get-random-values';
 import { v4 as uuidv4 } from 'uuid';
 import Icon from "react-native-vector-icons/Entypo";
+import Icon2 from "react-native-vector-icons/AntDesign";
 import { Audio } from 'expo-av';
 import { getMessages, postAudioMessage, postUserMessage } from '../api/MessageAPI.js';
 import CustomBubble from './CustomBubble.js';
@@ -49,11 +50,6 @@ const Chat = ({ route }) => {
     }
   }
 
-  const onPressButton = async () => {
-    console.log('Start recording...');
-    onStartRecord(setRecording, permissionResponse, requestPermission)
-  }
-
   const createNewMessage = (messageId, text, audio, userId, translation, romanization) => {
     const message = {
       _id: messageId,
@@ -73,6 +69,11 @@ const Chat = ({ route }) => {
       return GiftedChat.append(previousMessages, message) 
     })
     return message
+  }
+
+  const onPressButton = async () => {
+    console.log('Start recording...');
+    onStartRecord(setRecording, permissionResponse, requestPermission)
   }
 
   const onReleaseButton = async () => {
@@ -117,7 +118,8 @@ const Chat = ({ route }) => {
     return (
       <TouchableOpacity onPress={() => playAudio(currentMessage.audio)}>
         <View style={styles.audioMessageContainer}>
-          <Text style={styles.audioMessageText}>🔊 Play Audio</Text>
+          <Icon2 name="sound" size={20} color="black" />
+          <Text style={styles.audioMessageText}> Play Audio</Text>
         </View>
       </TouchableOpacity>
     )
@@ -150,6 +152,9 @@ const Chat = ({ route }) => {
         user={{
           _id: 1,
         }}
+        textInputProps={{
+          placeholder: 'Speak in Chinese or English',
+        }}
         renderAvatar={(props) => <CustomAvatar {...props}/>}
         renderSend={renderSend}
         renderMessageAudio={renderMessageAudio}
@@ -170,6 +175,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginRight: 10,
     marginBottom: 5,
+  },
+  audioMessageContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#f0f0f0',
+    padding: 5,
+    borderRadius: 20,
   },
   composerContainer: {
     flexDirection: 'row',

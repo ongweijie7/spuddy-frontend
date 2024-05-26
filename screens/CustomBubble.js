@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Bubble } from 'react-native-gifted-chat';
 
 const CustomBubble = (props) => {
   const { currentMessage } = props

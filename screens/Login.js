@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     color: '#000', // Black text
   },
   button: {
-    backgroundColor: '#32CD32', // Green color for the button
+    backgroundColor: 'white', // Green color for the button
     borderRadius: 10,
     paddingVertical: 15,
     paddingHorizontal: 30,
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 18,
     fontWeight: '600',
-    color: 'white',
+    color: 'rgb(86, 193, 40)',
   },
 });
 

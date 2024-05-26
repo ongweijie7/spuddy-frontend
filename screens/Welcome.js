@@ -14,7 +14,7 @@ const Welcome = ({ navigation }) => {
       <View style={styles.container}>
         <Text h2 h2Style={styles.h2}>Welcome to</Text>
         <Text h1 h1Style={styles.h1}>Spuddi</Text>
-        <Text h4 h4Style={styles.h4}>Your personal AI chat buddy</Text>
+        <Text h4 h4Style={styles.h4}>Your Personal Speak Buddy</Text>
         <Button size="md" buttonStyle={styles.button} onPress={onPress}>Let's Go!</Button>
         <Image 
             source={require('../assets/SpuddyWelcome.png')} // Updated path to the penguin image
@@ -30,7 +30,6 @@ const Welcome = ({ navigation }) => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    // backgroundColor: 'rgb(255, 152, 0)', // Same orange background
   },
   gradient: {
     flex: 1,
@@ -52,7 +51,6 @@ const styles = StyleSheet.create({
     color: 'white'
   },
   button: {
-    color: '#42a5f5',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 20,

@@ -19,7 +19,7 @@ export default function App() {
           <Screen name="Login" component={Login} options={{ headerShown: false }}/>
           <Screen name="LanguageSelection" component={LanguageSelection} options={{ headerShown: false }}/>
           <Screen name="NativeLanguageSelection" component={NativeLanguageSelection} options={{ headerShown: false }}/>
-          <Screen name="Chat" component={Chat} options={{ headerBackTitleVisible: false }}/>
+          <Screen name="Chat" component={Chat} options={{ headerBackTitleVisible: false, title: 'Streak Day 1 🔥' }}/>
         </Navigator>
         <StatusBar style="auto" />
       </NavigationContainer>
