@@ -22,6 +22,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "Info.plist": {
+      "NSMicrophoneUsageDescription": "Give $(PRODUCT_NAME) permission to use your microphone. Your record wont be shared without your permission."
     }
   }
 }
